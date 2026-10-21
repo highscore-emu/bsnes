@@ -351,7 +351,7 @@ auto Program::videoFrame(const uint16* data, uint pitch, uint width, uint height
 	} else {
 		hs_software_context_set_colorburst (context, 1.5 * width / 256.0, -1.0 / 3.0, colorburstPhase / 3.0);
 
-		if (interlacing_mode != HS_INTERLACING_ODD_FIELD)
+		if (interlacing_mode != HS_INTERLACING_EVEN_FIELD)
 			colorburstPhase ^= 1;
 	}
 
